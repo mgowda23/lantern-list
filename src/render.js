@@ -151,7 +151,6 @@ function fact(label, value) {
 }
 
 export function renderDetail(market) {
-  const route = `/markets/${market.slug}`
   const body = `<p class="back"><a href="/">← All markets</a></p>
       <article class="detail">
         <div class="detail-layout">
@@ -160,7 +159,6 @@ export function renderDetail(market) {
             <p class="kicker">${escapeHtml(market.city)} · ${escapeHtml(market.region)}</p>
             <h1>${escapeHtml(market.name)}</h1>
             <p class="lede">${escapeHtml(market.description)}</p>
-            <p class="route">Unique URL: <a href="${escapeHtml(route)}"><code>${escapeHtml(route)}</code></a></p>
           </div>
         </div>
         <h2>All details</h2>
