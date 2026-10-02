@@ -31,7 +31,7 @@ The following **additional** features are implemented:
 **Note: please be sure to show the unique URL for each detailed view in the address bar.**
 Here's a walkthrough of implemented required features:
 
-<img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='app_walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [Kap](https://getkap.co/)
 
