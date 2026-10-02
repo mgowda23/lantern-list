@@ -36,15 +36,20 @@ Here's a walkthrough of implemented required features:
 GIF created with [Kap](https://getkap.co/)
 
 ## Notes
-To run the app:
+To run the app, use two terminals, the same way as the [WEB103 Lab 1 exemplar](https://github.com/codepath/web103-lab1-exemplar):
 
-1. `npm install`
-2. `npm start`
-3. Open [http://localhost:3000](http://localhost:3000)
+1. Open a terminal and navigate into the `client` directory.
+2. Run `npm install` to install the client dependencies.
+3. Run `npm run dev` to start the frontend.
+4. Open a **new** terminal and navigate into the `server` directory.
+5. Run `npm install` to install the server dependencies.
+6. Run `npm run start` to start the backend.
 
-Detail routes follow `/markets/:slug`. An unknown slug, such as `/markets/not-a-market`, and any other unknown path both return the styled 404 page.
+Open [http://localhost:5173](http://localhost:5173). That is the site. The Vite dev server forwards `/api` to the Express server on port 3001. Opening [http://localhost:3001](http://localhost:3001) shows the API heading, not the market pages.
 
-The list items share the same fields on purpose, so Unit 2 can move this data into a database without redesigning the pages. Photos are stored in `public/images` and come from Unsplash.
+Detail routes follow `/markets/:slug` on the Vite site, for example [http://localhost:5173/markets/raohe](http://localhost:5173/markets/raohe). An unknown slug, such as `/markets/not-a-market`, and any other unknown path render the client 404 page.
+
+The list items share the same fields on purpose, so Unit 2 can move this data into a database without redesigning the pages. Photos are stored in `client/public/images` and come from Unsplash.
 
 The fiddly part was making the detail route and the 404 agree: `/markets/raohe` should render a market, while `/markets/nope` should be a 404 instead of an empty detail page.
 
