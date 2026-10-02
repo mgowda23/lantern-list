@@ -54,7 +54,7 @@ async function loadDetail(slug) {
     renderMissing(location.pathname)
     return
   }
-  const facts = [['Name', market.name], ['City', market.city], ['Region', market.region], ['Specialty', market.specialty], ['Hours', market.hours], ['Price range', market.priceRange], ['Best for', market.bestFor], ['Vibe', market.vibe], ['Description', market.description], ['Photo', market.image], ['Photo description', market.imageAlt], ['Photo credit', market.photoCredit], ['Slug', market.slug]]
+  const facts = [['Name', market.name], ['City', market.city], ['Region', market.region], ['Specialty', market.specialty], ['Hours', market.hours], ['Price range', market.priceRange], ['Best for', market.bestFor], ['Vibe', market.vibe], ['Description', market.description]]
   app.innerHTML = `<p class="back"><a href="/">← All markets</a></p><article class="detail"><div class="detail-layout"><img src="${escapeHtml(market.image)}" alt="${escapeHtml(market.imageAlt)}" width="1400" height="875"><div><p class="kicker">${escapeHtml(market.city)} · ${escapeHtml(market.region)}</p><h1>${escapeHtml(market.name)}</h1><p class="lede">${escapeHtml(market.description)}</p></div></div><h2>All details</h2><dl class="facts">${facts.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join('')}</dl></article>`
 }
 
